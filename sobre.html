@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="Icon" href="img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acessibilidade</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="file:///C:/Users/Usuario/Desktop/prova2/index.html">Início</a>
+        <a href="file:///C:/Users/Usuario/Desktop/prova2/sobre.html" class="active">Sobre</a>
+        <a href="file:///C:/Users/Usuario/Desktop/prova2/decretos.html">Decretos</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <div class="btn-container">
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+    </div>
+
+
+    <button onclick="myFunction()">Modo noturno</button>
+
+
+    <center><img src="img/test2.png" alt="Icones de acessibilidade" class="responsive" width="600px" height="400">
+    </center>
+    <br>
+
+    <h2>O que é um Website Acessível?</h2>
+    <p>
+        A proposta de um website (ou qualquer outra mídia digital) bem concebido e acessível é a de beneficiar as
+        pessoas com necessidades especiais, dando-lhes autonomia e permitindo que elas não só utilizem, mas
+        também contribuam com a web.
+    </p>
+    <p>
+        Sua flexibilidade beneficia igualmente pessoas idosas, aquelas não fluentes na escrita de um idioma, pessoas com
+        conexões lentas, ou usuários de tecnologias ultrapassadas, internautas novos ou pouco frequentes, usuários de
+        telefones móveis, indivíduos com limitações temporárias, entre outros.
+    </p>
+    <p>
+        Um website com adequado contraste de cores e com opção para alternância de tamanho da fonte beneficia igualmente
+        o indivíduo com baixa visão, com a visão comprometida pela idade e quem faz uma busca em seu celular à luz do
+        sol, por exemplo.
+    </p>
+
+    <h2>Vantagem competitiva</h2>
+    <p>
+        Em um mercado no qual, ainda hoje, a maioria ignora a importância da acessibilidade e, em se tratando do
+        ambiente web, no qual a concorrência está a um clique de distância, deveria ser óbvio para uma empresa ter um
+        sítio em que o seu cliente não tenha barreiras de acesso ao que procura, e que consiga realizar com facilidade
+        as transações que deseja. É uma grande vantagem competitiva em relação a uma empresa que tenha um sítio com
+        problemas de acessibilidade.
+    </p>
+
+    <h2>Aumento da visibilidade do sítio pelos sistemas de busca</h2>
+    <p>
+        Em um sítio web, para que a informação contida em uma imagem se torne acessível por pessoas com deficiência
+        visual (ou que tenham dificuldade para interpretar imagens, ou que estejam utilizando um navegador que não
+        carrega imagens), é necessário criar uma descrição textual com a informação. Essa descrição poderá ser lida com
+        a utilização de programas especiais, conhecidos como leitores de telas, capazes de ler textos, mas não de
+        interpretar imagens.
+    </p>
+    <br>
+
+
+    <center>
+        <footer class="page-footer font-small blue">
+
+            <div style="background-color:darkgray">
+                <div class="footer-copyright text-center py-3">© 2020 Copyright
+                </div>
+            </div>
+
+        </footer>
+    </center>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var elementBody = document.querySelector('body');
+            var elementBtnIncreaseFont = document.getElementById('increase-font');
+            var elementBtnDecreaseFont = document.getElementById('decrease-font');
+            // Padrão de tamanho, equivale a 100% do valor definido no Body
+            var fontSize = 100;
+            // Valor de incremento ou decremento, equivale a 10% do valor do Body
+            var increaseDecrease = 10;
+
+            // Evento de click para aumentar a fonte
+            elementBtnIncreaseFont.addEventListener('click', function (event) {
+                fontSize = fontSize + increaseDecrease;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+
+            // Evento de click para diminuir a fonte
+            elementBtnDecreaseFont.addEventListener('click', function (event) {
+                fontSize = fontSize - increaseDecrease;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+        }
+    </script>
+
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+
+</html>

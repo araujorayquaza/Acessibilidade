@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="Icon" href="img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acessibilidade</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="file:///C:/Users/Usuario/Desktop/prova2/index.html" class="active">Início</a>
+        <a href="file:///C:/Users/Usuario/Desktop/prova2/sobre.html">Sobre</a>
+        <a href="file:///C:/Users/Usuario/Desktop/prova2/decretos.html">Decretos</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <div class="btn-container">
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+    </div>
+
+
+    <button onclick="myFunction()">Modo noturno</button>
+
+    <h2>“Para a maioria das pessoas a tecnologia torna a vida mais fácil. Para uma pessoa com necessidades especiais, a
+        tecnologia torna as coisas possíveis." Jorge Fernandes e Francisco Godinho.</h2>
+
+    <center><img src="img/test1.png" alt="Banner de acessibilidade na web" class="responsive" width="600px"
+            height="400"></center>
+    <br>
+
+    <h2>Acessibilidade na web</h2>
+    <p>
+        A expressão acessibilidade Web refere-se a prática inclusiva de fazer websites que possam ser utilizados por
+        todas as pessoas que tenham deficiência ou não. Quando os sites são corretamente concebidos, desenvolvidos e
+        editados, todos os usuários podem ter igual acesso à informação e funcionalidade.
+    </p>
+    <p>
+        Muitas pessoas com incapacidades necessitam da acessibilidade na Web para realizar suas atividades. Para que
+        essas pessoas usufruam e contribuam para a Web de uma forma eficaz, é necessário que surjam, cada vez mais,
+        softwares mais acessíveis.
+    </p>
+    <p>
+        A acessibilidade consiste na facilidade de acesso e de uso de ambientes, produtos e serviços por qualquer pessoa
+        e em diferentes contextos. Envolve o Design Inclusivo, oferta de um leque variado de produtos e serviços que
+        cubram as necessidades de diferentes populações (incluindo produtos e serviços de apoio), adaptação, meios
+        alternativos de informação, comunicação, mobilidade e manipulação [Francisco Godinho, 2010].
+    </p>
+    <br>
+
+    <center>
+        <footer class="page-footer font-small blue">
+
+            <div style="background-color:  darkgray">
+                <div class="footer-copyright text-center py-3">© 2020 Copyright
+                </div>
+            </div>
+
+        </footer>
+    </center>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var elementBody = document.querySelector('body');
+            var elementBtnIncreaseFont = document.getElementById('increase-font');
+            var elementBtnDecreaseFont = document.getElementById('decrease-font');
+            // Padrão de tamanho, equivale a 100% do valor definido no Body
+            var fontSize = 100;
+            // Valor de incremento ou decremento, equivale a 10% do valor do Body
+            var increaseDecrease = 10;
+
+            // Evento de click para aumentar a fonte
+            elementBtnIncreaseFont.addEventListener('click', function (event) {
+                fontSize = fontSize + increaseDecrease;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+
+            // Evento de click para diminuir a fonte
+            elementBtnDecreaseFont.addEventListener('click', function (event) {
+                fontSize = fontSize - increaseDecrease;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+        }
+    </script>
+
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+
+</html>
